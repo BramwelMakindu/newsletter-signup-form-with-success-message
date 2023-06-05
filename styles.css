@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: hsl(235, 18%, 26%);
+}
+
+.subscribe{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    height: 500px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, .3);
+}
+
+.subscribe.active{
+    display: none;
+}
+
+.left-side{
+    width: 400px;
+}
+
+.left-side h1{
+    font-size: 50px;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 1.5rem;
+}
+
+.left-side p{
+    font-size: 16px;
+    color: hsl(234, 29%, 20%);
+}
+
+.perks{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.perks img{
+    margin-right: 10px;
+}
+
+.list{
+    margin: 2rem 0;
+}
+
+.input-details{
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.input-details span{
+    font-size: 14px;
+    color: hsl(4, 100%, 67%);
+    display: none;
+}
+
+.error-message.active{
+    display: block;
+}
+
+.input-div p{
+    color: hsl(234, 29%, 20%);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.input{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid hsl(231, 7%, 60%);
+    border-radius: 5px;
+    outline: none;
+}
+
+.input.active{
+    color: hsl(4, 100%, 67%); 
+    border-color: hsl(4, 100%, 67%);
+}
+
+.input-div{
+    margin-bottom: 1rem;
+}
+
+.submit-btn{
+    padding: 10px;
+    width: 96%;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.right-side{
+    height: 100%;
+}
+
+.right-side img{
+    height: 100%;
+}
+
+/*------subscribed popup-----*/
+.subscribed{
+    width: 280px;
+    padding: 30px;
+    color: hsl(234, 29%, 20%);
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .3);
+    display: none;
+}
+
+.subscribed img{
+    width: 40px;
+    margin-bottom: 1rem;
+}
+
+.subscribed h1{
+    margin-bottom: 1rem;
+    font-size: 35px;
+}
+
+.subscribed p{
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.subscribed p span{
+    font-weight: bold;
+}
+
+.dismiss-btn{
+    width: 100%;
+    padding: 10px;
+    background-color: hsl(234, 29%, 20%);
+    border: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .3);
+    transition: background-color .2s;
+}
+
+.submit-btn:hover, .dismiss-btn:hover{
+    background-color: hsl(4, 100%, 67%);
+}
+
+.submit-btn:active, .dismiss-btn:active{
+    opacity: .7;
+}
+
+.subscribed.active{
+    display: block;
+}
+
+footer{
+    margin-top: 1rem;
+}
+
+.attribution{
+    color: hsl(231, 7%, 60%);
+}
+
+.attribution a{
+    color: white;
+}
+
+.attribution a:hover{
+    color: hsl(4, 100%, 67%);
+}
+
+
+/*--------for small screen----*/
+
+@media screen and (max-width: 800px){
+    body{
+        min-height: 100vh;
+        padding-bottom: 2rem;
+    }
+    .subscribe{
+        width: 340px;
+        height: unset;
+        flex-direction: column-reverse;
+        padding: 15px;
+        padding-top: 0;
+        justify-content: unset;
+        overflow: hidden;
+    }
+
+    .left-side{
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .left-side h1{
+        font-size: 20px;
+    }
+
+    .left-side p{
+        font-size: 14px;
+    }
+
+    .right-side{
+        width: 400px;
+        border-radius: 40px;
+        height: 500px;
+        background-image: url(images/illustration-sign-up-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .right-side img{
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .attribution{
+        font-size: 10px;
+    }
+}
